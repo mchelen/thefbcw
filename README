@@ -1,0 +1,15 @@
+mkdir thefbcw
+cd thefbcw
+mkdir phirehose
+wget http://phirehose.googlecode.com/files/phirehose_0.2.0.tar.gz
+tar xvzf phirehose_0.2.0.tar.gz
+
+
+
+download files
+
+visit /install.php in browser
+
+visit /index.php in browser
+
+working?

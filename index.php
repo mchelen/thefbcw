@@ -1,73 +1,13 @@
 <?php
-// http://sourceforge.net/projects/meritomony
 
-//the path to the php includes
-$pathincludes = 'includes/';
+include('include/config.inc.php');
 
-//database config file
-require 'private/dbconfig.php';
+include('include/auth.inc.php');
 
-require 'includes/startup.php';
+include('include/functions.php');
 
-require 'includes/input.php';
+include('include/classes.inc.php');
 
-
-//load db based modules
-require 'includes/opendb.php';
-
-
-require 'includes/configure.php';
-
-require 'includes/access.php';
-
-require 'includes/admin.php';
-
-
-
-
-//see what part to load
-
-if ($inputView == "atp")
-{
-//load automatic teller panel
-require 'includes/atp.php';
-}
-
-
-elseif ($inputView == "cron")
-{
-require 'includes/cron.php';
-
-}
-
-elseif ($inputView == "blank")
-{
-echo "blanc";
-}
-
-elseif ($inputView == "wrapper")
-{
-require 'includes/wrapper.php';
-}
-
-else {
-
-$inputView = "home";
-
-require 'includes/home.php';
-}
-
-
-
-
-require 'includes/closedb.php';
-
-require 'includes/footer.php';
-
-
-require 'includes/status.php';
-
-require 'includes/render.php';
-
+include('include/main.php');
 
 ?>
